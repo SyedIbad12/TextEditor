@@ -101,7 +101,7 @@ export default function TextBox(props) {
           {text.trim().length === 0 ? 0 : text.trim().split(/\s+/).length} words
           and {text.length} characters
         </p>
-        <p> {0.008 * text.split(" ").length} Minutes To Read This </p>
+        <p> {0.008 * text.split(" ").filter((e)=>{return e.length!==0}).length} Minutes To Read This </p>
         <p>{text.split(".").length - 1} Sentences</p>
         <h2>Preview</h2>
         <p className="mt-3 mb-5">
